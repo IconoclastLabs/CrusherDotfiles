@@ -54,3 +54,4 @@ extract () {
 }
 
 source $HOME/.aliases
+cd /crusher
