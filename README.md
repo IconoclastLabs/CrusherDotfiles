@@ -1,4 +1,4 @@
-This is my customized configurations for my *nix environments so that all my machines stay in sync.
+Customized configurations for my Crusher puppet provisioning.
 
 The ZSH config relies on https://github.com/robbyrussell/oh-my-zsh.
 
