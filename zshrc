@@ -13,20 +13,11 @@ export ZSH_THEME="crunch"
 #export ZSH_THEME="random"
 
 # oh-my-zsh plugins
-plugins=(git ruby heroku gem rbenv bundler rails3 screen sublime ssh-agent vundle zeus)
+plugins=(git ruby heroku gem rbenv bundler rails3 screen ssh-agent vundle)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-noverify -Xcompile.invokedynamic=true"
-export JAVACMD=$(which drip)
-export DRIP_INIT_CLASS=org.jruby.main.DripMain
-if which brew > /dev/null; then eval "export BYOBU_PREFIX=`brew --prefix`"; fi
-export NODE_PATH="/usr/local/lib/node_modules"
-export GOROOT="/usr/local/go/"
-export GOPATH="$HOME/.go/"
-export PATH=$PATH:$GOROOT/bin
-export VAGRANT_DEFAULT_PROVIDER='vmware_fusion'
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 # Better manual pages (uses -help as fallback if no man page exists)
 man () {
 /usr/bin/man $@ || (help $@ 2> /dev/null && help $@ | most)
@@ -52,6 +43,6 @@ extract () {
          echo "'$1' is not a valid file"
      fi
 }
-
 source $HOME/.aliases
 cd /crusher
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
