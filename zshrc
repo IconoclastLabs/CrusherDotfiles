@@ -13,7 +13,7 @@ export ZSH_THEME="crunch"
 #export ZSH_THEME="random"
 
 # oh-my-zsh plugins
-plugins=(git ruby heroku gem rbenv bundler rails3 screen ssh-agent vundle)
+plugins=(git ruby heroku gem rbenv bundler rails screen ssh-agent vundle)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
@@ -44,5 +44,4 @@ extract () {
      fi
 }
 source $HOME/.aliases
-cd /crusher
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
